@@ -1,0 +1,5 @@
+http-call:
+ id: http-call-1
+ host: something.com
+ port: 1234
+ password: password

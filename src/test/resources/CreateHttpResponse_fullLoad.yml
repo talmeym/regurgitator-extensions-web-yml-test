@@ -1,0 +1,11 @@
+sequence: 
+ id: sequence-1
+ steps:
+  - create-http-response:
+     id: create-http-response-1
+     name: toTest1
+     source: context:location
+     processor:
+      test-value-processor:
+     status-code: 200
+     content-type: contentType

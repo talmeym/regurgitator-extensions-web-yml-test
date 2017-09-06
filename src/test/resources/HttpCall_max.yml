@@ -1,0 +1,11 @@
+http-call:
+ id: http-call-1
+ host: something.com
+ port: 1234
+ username: username
+ password: password
+ steps:
+ - test-step:
+    id: test-step-1
+ - test-step:
+    id: test-step-2
