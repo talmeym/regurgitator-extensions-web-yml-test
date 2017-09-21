@@ -1,4 +1,4 @@
-file-response:
- id: file-response-1
+create-file-response:
+ id: create-file-response-1
  source: request-metadata:path-info
  path-prefix: /assets

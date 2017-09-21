@@ -1,3 +1,0 @@
-file-response:
- id: file-response-1
- source: request-metadata:path-info
