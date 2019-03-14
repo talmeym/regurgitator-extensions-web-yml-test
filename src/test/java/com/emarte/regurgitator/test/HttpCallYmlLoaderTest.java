@@ -19,12 +19,12 @@ public class HttpCallYmlLoaderTest extends YmlLoaderTest {
 
     @Test
     public void testThis() throws IOException, RegurgitatorException {
-        assertExpectation("classpath:/HttpCall.yml", "com.emarte.regurgitator.extensions.web.HttpCall:['http-call-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:[com.emarte.regurgitator.extensions.web.HttpClientWrapper:['something.com',1234,null,null]],[]]");
+        assertExpectation("classpath:/HttpCall.yml", "com.emarte.regurgitator.extensions.web.HttpCall:['http-call-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:[com.emarte.regurgitator.extensions.web.HttpClientWrapper:['http','something.com',1234,null,null]],[]]");
     }
 
     @Test
     public void testMax() throws IOException, RegurgitatorException {
-        assertExpectation("classpath:/HttpCall_max.yml", "com.emarte.regurgitator.extensions.web.HttpCall:['http-call-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:[com.emarte.regurgitator.extensions.web.HttpClientWrapper:['something.com',1234,'username','password']],[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-2']]]");
+        assertExpectation("classpath:/HttpCall_max.yml", "com.emarte.regurgitator.extensions.web.HttpCall:['http-call-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:[com.emarte.regurgitator.extensions.web.HttpClientWrapper:['http','something.com',1234,'username','password']],[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-2']]]");
     }
 
     @Test(expected = RegurgitatorException.class)
