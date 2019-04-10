@@ -11,6 +11,8 @@ import org.junit.Test;
 import java.io.IOException;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.WebExtensionsLoaderTestExpectations.HttpCall;
+import static com.emarte.regurgitator.test.WebExtensionsLoaderTestExpectations.HttpCall_max;
 
 public class HttpCallYmlLoaderTest extends YmlLoaderTest {
     public HttpCallYmlLoaderTest() {
@@ -19,12 +21,12 @@ public class HttpCallYmlLoaderTest extends YmlLoaderTest {
 
     @Test
     public void testThis() throws IOException, RegurgitatorException {
-        assertExpectation("classpath:/HttpCall.yml", "com.emarte.regurgitator.extensions.web.HttpCall:['http-call-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:[com.emarte.regurgitator.extensions.web.HttpClientWrapper:['http','something.com',1234,null,null]],[]]");
+        assertExpectation("classpath:/HttpCall.yml", HttpCall);
     }
 
     @Test
-    public void testMax() throws IOException, RegurgitatorException {
-        assertExpectation("classpath:/HttpCall_max.yml", "com.emarte.regurgitator.extensions.web.HttpCall:['http-call-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:[com.emarte.regurgitator.extensions.web.HttpClientWrapper:['http','something.com',1234,'username','password']],[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-2']]]");
+    public void testMaximum() throws IOException, RegurgitatorException {
+        assertExpectation("classpath:/HttpCall_max.yml", HttpCall_max);
     }
 
     @Test(expected = RegurgitatorException.class)
@@ -38,7 +40,7 @@ public class HttpCallYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test
-    public void testFullLoad() throws IOException, RegurgitatorException {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/HttpCall_fullLoad.yml");
     }
 }
