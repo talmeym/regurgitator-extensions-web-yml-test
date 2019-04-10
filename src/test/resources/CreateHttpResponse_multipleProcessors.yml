@@ -1,0 +1,9 @@
+create-http-response:
+ id: create-http-response-1
+ name: toTest1
+ value: value
+ status-code: 200
+ content-type: contentType
+ processor:
+  - test-value-processor:
+  - test-value-processor:
