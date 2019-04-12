@@ -4,6 +4,4 @@ create-http-response:
  value: value
  status-code: 200
  content-type: contentType
- processors:
-  - test-value-processor:
-  - test-value-processor:
+ processors: test-value-processor,test-value-processor
