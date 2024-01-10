@@ -4,9 +4,9 @@
  */
 package uk.emarte.regurgitator.test;
 
+import org.junit.Test;
 import uk.emarte.regurgitator.core.RegurgitatorException;
 import uk.emarte.regurgitator.extensions.web.CreateFileResponseYmlLoader;
-import org.junit.Test;
 
 import java.io.IOException;
 
