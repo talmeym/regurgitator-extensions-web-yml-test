@@ -20,7 +20,7 @@ public class HttpCallYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test
-    public void testThis() throws IOException, RegurgitatorException {
+    public void testLoader() throws IOException, RegurgitatorException {
         assertExpectation("classpath:/HttpCall.yml", HttpCall);
     }
 

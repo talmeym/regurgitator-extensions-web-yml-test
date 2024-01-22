@@ -16,7 +16,7 @@ public class QueryParamProcessorYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test
-    public void testThis() throws Exception {
+    public void testProcessor() throws Exception {
         assertExpectation("classpath:/QueryParamProcessor.yml", QueryParamProcessor);
     }
 
